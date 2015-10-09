@@ -164,14 +164,6 @@ function calDiscount(){
                                         <form class='form-horizontal form-validate' method="post" action="" enctype="multipart/form-data">
                                             <input type="hidden" name="discount" id="discount" value="" />
                                             <div class="control-group">
-                                                <label for="name" class="control-label">商品名称：</label>
-                                                <div class="controls">
-                                                    <input type="text" name="name" value="" class="px" style="width:200px;" />
-                                                    <span class="maroon">*</span>
-                                                    <span class="help-inline"></span>
-                                                </div>
-                                            </div>
-                                            <div class="control-group">
                                                 <label for="name" class="control-label">商品类别：</label>
                                                 <div class="controls">
                                                     <select id="catid" name="catid">
@@ -183,25 +175,28 @@ function calDiscount(){
                                                 </div>
                                             </div>
                                             <div class="control-group">
-                                                <label for="name" class="control-label">商品价格：</label>
+                                                <label for="name" class="control-label">商品名称：</label>
                                                 <div class="controls">
-                                                    <input type="text" id="price" onchange="calDiscount();" name="price" value="" class="px" style="width:100px;" />
-                                                    元
+                                                    <input type="text" name="name" value="" class="px" style="width:200px;" />
                                                     <span class="maroon">*</span>
                                                     <span class="help-inline"></span>
                                                 </div>
                                             </div>
                                             <div class="control-group">
-                                                <label for="name" class="control-label">商品原价：</label>
+                                                <label for="name" class="control-label">购物种类：</label>
                                                 <div class="controls">
-                                                    <input type="text" id="oprice" onchange="calDiscount();" name="oprice" value="" class="px" style="width:100px;" />
-                                                    元
+                                                    <select id="catid" name="catid">
+                                                        <option value="0">请选择分类...</option>
+                                                        <option value="1">普通商品</option>
+                                                        <option value="2">降价商品</option>
+                                                        <option value="3">库存紧张</option>
+                                                    </select>
                                                     <span class="maroon">*</span>
                                                     <span class="help-inline"></span>
                                                 </div>
                                             </div>
                                             <div class="control-group">
-                                                <label for="name" class="control-label">商品图片：</label>
+                                                <label for="name" class="control-label">商品缩略图：</label>
                                                 <div class="controls">
                                                     <input type="text" name="logourl" value="" class="px" id="pic" style="width:250px;" />
                                                     &nbsp;
@@ -215,13 +210,110 @@ function calDiscount(){
                                                 </div>
                                             </div>
                                             <div class="control-group">
-                                                <label for="name" class="control-label">商品图文介绍：</label>
+                                                <label for="name" class="control-label">商品轮播图1：</label>
+                                                <div class="controls">
+                                                    <input type="text" name="logourl" value="" class="px" id="pic" style="width:250px;" />
+                                                    &nbsp;
+                                                    <a href="###" onclick="chooseFile('pic','my')" class="a_upload">选择</a>
+                                                    &nbsp;
+                                                    <a href="###" onclick="upyunPicUpload('pic',700,700,'21435')" class="a_upload">上传</a>
+                                                    &nbsp;
+                                                    <a href="###" onclick="viewImg('pic')" class="a_upload">预览</a>
+                                                    <span class="maroon">*</span>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label for="name" class="control-label">商品轮播图2：</label>
+                                                <div class="controls">
+                                                    <input type="text" name="logourl" value="" class="px" id="pic" style="width:250px;" />
+                                                    &nbsp;
+                                                    <a href="###" onclick="chooseFile('pic','my')" class="a_upload">选择</a>
+                                                    &nbsp;
+                                                    <a href="###" onclick="upyunPicUpload('pic',700,700,'21435')" class="a_upload">上传</a>
+                                                    &nbsp;
+                                                    <a href="###" onclick="viewImg('pic')" class="a_upload">预览</a>
+                                                    <span class="maroon">*</span>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label for="name" class="control-label">商品轮播图3：</label>
+                                                <div class="controls">
+                                                    <input type="text" name="logourl" value="" class="px" id="pic" style="width:250px;" />
+                                                    &nbsp;
+                                                    <a href="###" onclick="chooseFile('pic','my')" class="a_upload">选择</a>
+                                                    &nbsp;
+                                                    <a href="###" onclick="upyunPicUpload('pic',700,700,'21435')" class="a_upload">上传</a>
+                                                    &nbsp;
+                                                    <a href="###" onclick="viewImg('pic')" class="a_upload">预览</a>
+                                                    <span class="maroon">*</span>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label for="name" class="control-label">商品原价：</label>
+                                                <div class="controls">
+                                                    <input type="text" id="price" onchange="calDiscount();" name="price" value="" class="px" style="width:100px;" />
+                                                    元
+                                                    <span class="maroon">*</span>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label for="name" class="control-label">商品折扣价：</label>
+                                                <div class="controls">
+                                                    <input type="text" id="oprice" onchange="calDiscount();" name="oprice" value="" class="px" style="width:100px;" />
+                                                    元
+                                                    <span class="maroon">*</span>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="control-group">
+                                                <label for="name" class="control-label">商品图文详情：</label>
                                                 <div class="controls">
                                                     <textarea name="intro" id="intro"  rows="5" style="width:590px;height:360px"></textarea>
                                                     <span class="maroon">*</span>
                                                     <span class="help-inline"></span>
                                                 </div>
                                             </div>
+
+                                            <div class="control-group">
+                                                <label for="name" class="control-label">商品参数：</label>
+                                                <div class="controls">
+                                                    <textarea name="intro" id="intro"  rows="5" style="width:590px;height:180px"></textarea>
+                                                    <span class="maroon">*</span>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <label for="name" class="control-label">商品推荐：</label>
+                                                <div class="controls">
+                                                    <textarea name="intro" id="intro"  rows="2" style="width:590px;height:90px"></textarea>
+                                                    <span class="maroon">*</span>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="title">是否启用：</label>
+                                                <div class="controls">
+                                                 <input type="radio" name="isshow" value="1" checked="checked"/>启用&nbsp;&nbsp;<input type="radio" name="isshow" value="0"/>不启用
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <label for="name" class="control-label">排序编号：</label>
+                                                <div class="controls">
+                                                    <input type="text" id="oprice" onchange="calDiscount();" name="oprice" value="" class="px" style="width:100px;" />
+                                                    
+                                                    <span class="maroon">*</span>
+                                                    <span class="help-inline"></span>
+                                                </div>
+                                            </div>
+
                                             <div class="form-actions">
                                                 <!--零-度微-助-手-w x-0 d u-c c   -->
                                                 <input type="hidden" value="0" name="dining" />
